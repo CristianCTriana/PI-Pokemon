@@ -9,7 +9,7 @@ const router = Router();
 module.exports = router;
 
 const getApiPokemons = async ()=>{
-    const apiInfo = await axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=12');
+    const apiInfo = await axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20');
     const pokemons = await apiInfo.data.results.map(e => {
         return {
             name: e.name
